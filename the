@@ -1,0 +1,28 @@
+#include<iostream>
+
+using namespace std;
+
+
+ 
+
+int main()
+{
+    int t,h,e,spc;
+
+ string str;
+ getline(cin,str);
+
+    int i,freq=0;
+   int  ctr=str.length();
+    for(i=0;i<=ctr;i++)
+	{
+		t=(str[i]=='t'||str[i]=='T');
+		h=(str[i+1]=='h'||str[i+1]=='H');
+		e=(str[i+2]=='e'||str[i+2]=='E');
+		spc=(str[i+3]==' '||str[i+3]=='\0');
+		if ((t&&h&&e&&spc)==1)
+		   freq++;
+	}
+	cout<<freq;
+    
+}
